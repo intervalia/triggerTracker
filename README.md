@@ -3,12 +3,16 @@ jQuery triggerTracker
 
 TriggerTracker is a tool for tracking jQuery events. It is a single JavaScript file that, when loaded, provides output to the browser's console related to jQuery event triggering and event handlers.
 
+### Compatability
+
+triggerTracker has been tested with jQuery versions 1.7.0 through 1.11.0. I have not yet (March 13, 2014) tested with jQuery 2.x.
+
 ### How to use triggerTracker
 
 Just load triggerTracker as soon as possible after loading jQuery.
 
 ```html
-<script src="jQuery-1.9.1.min.js"></script>
+<script src="jQuery-1.11.0.min.js"></script>
 <script src="trigger-tracker.js"></script>
 ```
 
@@ -26,7 +30,7 @@ Below is some sample code to conditionaly load triggerTracker within the client-
       background-color: #FFFFDD;
     }
   </style>
-  <script src="js/jQuery-1.9.1.js"></script>
+  <script src="js/jQuery-1.11.0.js"></script>
   <script>
     function addTriggerTracker() {
       var tag = document.createElement("script"),
@@ -53,7 +57,7 @@ Below is some sample code to conditionaly load triggerTracker within the client-
       $(".selector").on("click", function (evt) {
         var $body = $("body");
         $body.toggleClass("selected");
-        if ($body.has("selected")) {
+        if ($body.hasClass("selected")) {
           $body.trigger("selected");
         }
       });
