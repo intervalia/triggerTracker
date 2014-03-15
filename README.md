@@ -138,6 +138,6 @@ TriggerTracker also keeps track of how long each event handler takes and how lon
 
 Browser originating triggers do not show in triggerTracker. So we did not see a TRIGGER block for the 'click' event on the button. So if there are no handlers for a specific browser event, then you will see nothing new in the console.
 
-More information can be found in the wiki
-![](https://github.com/intervalia/triggerTracker/wiki)
+More information can be found in the wiki: https://github.com/intervalia/triggerTracker/wiki
+
 
