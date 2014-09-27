@@ -1,4 +1,4 @@
-/* @preserve
+﻿/* @preserve
  * Trigger Tracker (v.1.0.0)
  * by Michael G Collins (www.intervalia.com)
  * intervalia@gmail.com

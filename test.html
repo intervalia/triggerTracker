@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Trigger Tracker Test</title>
+    <!-- script src="http://code.jquery.com/jquery-1.11.1.min.js"></script -->
+    <!-- script src="http://code.jquery.com/jquery-2.0.0.min.js"></script -->
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="trigger-tracker-poly-1.0.0.js"></script>
+    <script src="trigger-tracker-1.0.0.js"></script>
+  </head>
+  <body>
+    <div class="one">One</div>
+    <div class="two">Two</div>
+    <div class="three">Three</div>
+    <script>
+      var $doc = $(document);
+      function docClickHandler(evt) {
+        $target = $(evt.target);
+
+        if ($target.is(".one")) {
+          return false;
+        }
+
+        if ($target.is(".three")) {
+          $doc.trigger("mine");
+        }
+
+      }
+
+      function docMineHandler(evt) {
+      }
+
+      $doc.ready(function() {
+        $doc.on("click", docClickHandler);
+        $doc.on("mine", docMineHandler);
+      });
+    </script>
+  </body>
+</html>
